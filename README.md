@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cfchecker-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/cfchecker-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/cfchecker-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cfchecker-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cfchecker-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cfchecker-feedstock/branch/master)
