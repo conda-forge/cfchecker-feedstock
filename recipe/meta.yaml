@@ -1,4 +1,4 @@
-{% set version = "2.0.9" %}
+{% set version = "3.0.1" %}
 
 package:
     name: cfchecker
@@ -24,14 +24,14 @@ requirements:
         - python
         - setuptools
         - numpy
-        - cdat-lite
-        - udunits2
+        - netCDF4
+        - cfunits
     run:
         - python
         - setuptools
         - numpy
-        - cdat-lite
-        - udunits2
+        - netCDF4
+        - cfunits
 
 test:
     commands:
