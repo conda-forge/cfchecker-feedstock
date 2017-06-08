@@ -7,10 +7,7 @@ package:
 source:
     fn: cfchecker-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
-    md5: e36c556454e21d88aaa9f0394429032f
-    patches:
-        # Ensure our udunits2 lib is used on all platforms.
-        - ctypes.patch
+    md5: 6aca97005b9c1cbc70bb7b8fbe63c70e
 
 build:
     skip: True  # [win or py3k]
