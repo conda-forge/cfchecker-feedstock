@@ -22,13 +22,13 @@ requirements:
         - python
         - setuptools
         - numpy
-        - netCDF4
+        - netcdf4
         - cfunits
     run:
         - python
         - setuptools
         - numpy
-        - netCDF4
+        - netcdf4
         - cfunits
 
 test:
