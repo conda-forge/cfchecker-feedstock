@@ -34,6 +34,7 @@ requirements:
 test:
     commands:
         - cfchecks -h
+        - cfchecks -v 1.6 http://home.badc.rl.ac.uk/astephens/downloads/CF_1_6_OK.nc
     imports:
         - cfchecker
 
