@@ -19,15 +19,12 @@ requirements:
   host:
     - python
     - pip
-    - numpy
-    - netcdf4
-    - cfunits
   run:
     - python
     - setuptools
-    - numpy
     - netcdf4
-    - cfunits
+    - numpy >=1.7,<1.17
+    - cfunits >=1.1.4,<3.0.0
 
 test:
   commands:
@@ -38,6 +35,7 @@ test:
 about:
   home: https://pypi.python.org/pypi/cfchecker
   license: BSD-3-Clause
+  license_file: LICENSE
   summary: The NetCDF Climate Forcast Conventions compliance checker
 
 extra:
