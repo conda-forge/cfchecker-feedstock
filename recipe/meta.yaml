@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.1.2" %}
 
 package:
   name: cfchecker
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
-  sha256: bea971f3653769209f0368c9720c98c9a0b112d3522ac2c02330e0df23103f33
+  sha256: fc3a4d7dd86b4cc87254b4594265ba574d249419259b0670fcb355459c1bbb2e
 
 build:
   skip: True  # [win or py3k]
