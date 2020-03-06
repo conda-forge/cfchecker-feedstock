@@ -1,4 +1,4 @@
-{% set version = "3.1.3" %}
+{% set version = "4.0.0" %}
 
 package:
   name: cfchecker
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
-  sha256: 07bf90e21e457c8977877c5a37debd9d9c8c34c50c0c40246c21fd46ad532881
+  sha256: 4c3443d01f6061becbe519754e3ccdd2b837712173413229fc5f43a50cb1eb45
 
 build:
-  skip: True  # [win or py3k]
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - cfchecks = cfchecker.cfchecks:main
@@ -23,11 +23,15 @@ requirements:
     - python
     - setuptools
     - netcdf4
-    - numpy >=1.7,<1.17
-    - cfunits >=1.1.4,<3.0.0
+    - numpy >=1.7
+    - cfunits >=3.0.0
+    - future
 
 test:
+  requires:
+    - pip
   commands:
+    - pip check
     - cfchecks -h
   imports:
     - cfchecker
