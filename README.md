@@ -7,7 +7,7 @@ Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfchecker-feedstock/blob/master/LICENSE.txt)
 
-Summary: The NetCDF Climate Forcast Conventions compliance checker
+Summary: The NetCDF Climate Forecast Conventions compliance checker
 
 Current build status
 ====================
