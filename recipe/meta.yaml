@@ -11,21 +11,21 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cfchecks = cfchecker.cfchecks:main
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - setuptools
-    - netcdf4
-    - numpy >=1.7
+    - python >=3.6
     - cfunits >=3.0.0
     - future
+    - netcdf4
+    - numpy >=1.7
+    - setuptools
 
 test:
   requires:
@@ -40,7 +40,7 @@ about:
   home: https://pypi.python.org/pypi/cfchecker
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: The NetCDF Climate Forcast Conventions compliance checker
+  summary: The NetCDF Climate Forecast Conventions compliance checker
 
 extra:
   recipe-maintainers:
