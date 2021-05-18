@@ -1,4 +1,4 @@
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: cfchecker
@@ -6,26 +6,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
-  sha256: 4c3443d01f6061becbe519754e3ccdd2b837712173413229fc5f43a50cb1eb45
+  sha256: 10b86748565c9e0f4c959e4d82fe83b00344551db3db3c7d0d2f8c31449aa1b9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cfchecks = cfchecker.cfchecks:main
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - setuptools
-    - netcdf4
-    - numpy >=1.7
+    - python >=3.6
     - cfunits >=3.0.0
     - future
+    - netcdf4
+    - numpy >=1.7
+    - setuptools
 
 test:
   requires:
@@ -40,7 +40,7 @@ about:
   home: https://pypi.python.org/pypi/cfchecker
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: The NetCDF Climate Forcast Conventions compliance checker
+  summary: The NetCDF Climate Forecast Conventions compliance checker
 
 extra:
   recipe-maintainers:
