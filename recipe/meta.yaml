@@ -5,22 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/cfchecker/cfchecker-{{ version }}.tar.gz
   sha256: 10b86748565c9e0f4c959e4d82fe83b00344551db3db3c7d0d2f8c31449aa1b9
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - cfchecks = cfchecker.cfchecks:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - cfunits >=3.0.0
     - future
     - netcdf4
@@ -30,6 +31,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - cfchecks -h
